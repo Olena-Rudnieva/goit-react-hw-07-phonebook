@@ -10,7 +10,7 @@ export const ContactListItem = ({ option }) => {
   return (
     <Item>
       <span>
-        {option.name}: {option.number}
+        {option.name}: {option.phone}
       </span>
       <Button type="button" onClick={onDeleteContact}>
         Delete

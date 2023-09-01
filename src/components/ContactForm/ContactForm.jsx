@@ -27,12 +27,12 @@ export const ContactForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // if (contacts.find(contact => data.name === contact.name)) {
-    //   alert(`${data.name} is already in contacts.`);
-    //   return;
-    // }
+    if (contacts.find(contact => data.name === contact.name)) {
+      alert(`${data.name} is already in contacts.`);
+      return;
+    }
 
-    dispatch(addContacts(data));
+    dispatch(addContacts({ name, phone: number }));
 
     reset();
   };
